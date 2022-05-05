@@ -1,0 +1,224 @@
+/*mobil Firts sin grid*/
+
+* {
+  box-sizing: border-box;
+}
+a:hover {
+    color:beige; 
+  }
+
+body {
+  font-family: Georgia, serif;
+  color:beige; 
+
+ background-image: url("fondo.png");
+ text-align:center; 
+}
+
+/*estilos básicos */
+main {
+
+  width:80%;
+padding:1em;
+  margin-left:50%;
+  height: 80%; 
+}
+
+.letras {
+font-weight: bold;
+/*margin-bottom: 1em;*/
+font-size: calc(0.3em + 2.2vw);
+text-align: center;
+/*border: 8px dotted black;
+padding:1px;
+background:lightblue;*/
+text-transform: uppercase;
+width:12em
+
+}
+a {
+
+  text-transform: uppercase;
+  text-decoration: none;
+  color: purple;
+  margin-bottom: 2em;
+  font-weight: bold;
+}
+
+img {
+  /* Para que sea responsiva */
+  width:15em;
+}
+
+.posicion {
+  width: 100%;
+ font-weight:bold;
+ 
+}
+
+
+/*media query que le da el concepto responsive sin grid*/
+@media (min-width:560px)  {
+
+
+
+
+img {
+  /* Para que sea responsiva */
+  width:20em;
+}
+
+.posicion {
+  width: 50%;
+ font-weight: bold;
+ 
+}
+#uno,#tres{
+  margin-left:38em;
+ margin-top: -4em;
+}
+#cuatro #dos{
+  margin-left:1em;
+}
+}
+
+
+/* Grid layout for wide display*/
+@supports (display:grid) {
+  * {
+    box-sizing: border-box;
+  }
+  html{
+    width: 100%;
+}
+
+  main {
+    display: grid;
+
+margin: auto;
+grid-template-columns: auto ;
+
+
+  }
+
+  img {
+    width: 5em;
+    height: 5em;
+    
+  }
+  .logo{
+     /* background-color: rgba(255, 255, 255, 0.8);*/
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;   
+  }
+
+ 
+  .letras {
+    font-weight: bold;
+    
+    padding:1px;
+  
+    text-transform: uppercase;
+    width: auto;
+    
+   /* background-clip: padding-box;
+    margin-right: -7em;*/
+    }
+
+
+  .posicion{
+      text-align: center;
+    }
+  
+ 
+
+
+
+  @media  (min-width:560px)  {
+  
+    .main { 
+      display: grid;
+     grid-template-columns: auto auto ;
+     width: 80%;
+     height: 80%;
+     
+    }/*
+    .posicion{
+      padding: 20px;
+      font-size: 30px;
+      border:0px;
+    }*/
+    #uno,#tres{
+      margin-left:auto;
+     margin-top: 0%;
+    }
+    /*
+    #cuatro,#dos{
+      margin-left:1em;
+    }*/
+
+    .letras {
+      
+      font-weight: bold;
+      padding:1px;
+  
+      text-transform: uppercase;
+      
+    
+      }
+      img{
+      height: 5em; 
+      width: 5em;
+
+  }
+
+   /* .main {
+     
+     display: grid;
+   grid-template-columns:auto auto auto auto;
+  
+   margin: 20px auto;
+   padding: 1em;
+   width: 80%;
+  }
+
+  .main > div {
+    background-color: bisque;
+    border: 1px solid black;
+  }
+}
+  /*
+    img {
+      width:8em;  
+        
+      }
+    .logo{
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;   
+    }
+
+   */
+   
+   
+
+  
+    
+   
+  
+
+  @media (min-width:1000px) {
+   
+        img {
+            width: 8em;
+            height: 8em;
+            
+          }
+    
+  }
+  }
+}
